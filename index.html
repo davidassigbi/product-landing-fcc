@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,29 +8,94 @@
     <link rel="stylesheet" href="style.css">
     <title>Product Landing Page - FCC</title>
 </head>
+
 <body>
-    <style>
-
-    </style>
-
     <header id="header">
-        <img src="SomCompanyLogo.img" alt="Company Logo" id="img-header">
+        <!-- user story 1 -->
+        <div id="logo">
+            <img src="https://miro.medium.com/max/700/1*7pWTj5Eu3dDLuIebrfYRUA.png" alt="Company Logo" id="header-img">
+            <!-- user story 2 -->
+            <div class="border" style="align-self: center; font-size: large;"><span style="font-weight: bold;">GitHub</span> Copilot</div>
+        </div>
 
         <nav id="nav-bar">
-            <a href="#section1" class="nav-link">Nav link 1</a>
-            <a href="#section2" class="nav-link">Nav link 2</a>
-            <a href="#section3" class="nav-link">Nav link 3</a>
-            <a href="#section4" class="nav-link">Nav link 4</a>
+            <!-- user story 3 -->
+            <a href="#form" class="nav-link">Sign up</a>
+            <a href="#features" class="nav-link">Features</a> <!-- user story 4, 5 -->
+            <a href="#how-it-works" class="nav-link">How it works</a>
         </nav>
     </header>
-    <video id="video" src="VideoSource.mp4" controls>
-        <source src="" type="audio" />
-    </video>
+    <div class="content-wrap"></div>
 
-    <form action="https://www.freecodecamp.com/email-submit" id="form">
-        <input type="email" id="email" placeholder="Enter your email address" required />
+    <h1>Your AI pair programmer</h1>
 
-        <input type="submit" id="submit" value="Submit" />
+    <iframe id="video" src="https://www.youtube.com/embed/St2CMvK4hK0" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe> <!-- user story 6 -->
+
+
+    <form action="https://www.freecodecamp.com/email-submit" id="form" class="spacing-v-sm">
+        <p style="font-size: larger; font-weight: bold;">Sign up for the technical preview</p>
+        <!-- user story 7, 12 -->
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+        <!-- user story 8, 9, 10 -->
+
+        <div class="flex-center">
+            <input type="submit" id="submit" value="Submit" /> <!-- user story 11 -->
+            <a style="margin: 0 .5rem;" href="https://github.com/features/copilot/signup" target="_blank">Copilot singup at Github</a>            
+        </div>
     </form>
+
+    <h2 id="features-title">Some of the most important features</h2>
+    <section id="features">
+        <div><strong>Extends your editor</strong>
+            <p>GitHub Copilot is available today as a Visual Studio Code extension. It works wherever Visual Studio Code
+                works — on your machine or in the cloud on GitHub Codespaces. And it’s fast enough to use as you type</p>
+            <a href="https://copilot.github.com/" target="_blank">Read more</a>
+        </div>
+        <div><strong>Speaks all the languages you love</strong>
+            <p>GitHub Copilot works with a broad set of frameworks and languages. The technical preview does especially
+                well for Python, JavaScript, TypeScript, Ruby, and Go, but it understands dozens of languages and can help
+                you find your way around almost anything.</p>
+            <a href="https://copilot.github.com/" target="_blank">Read more</a>
+        </div>
+        <div><strong>You’re the pilot</strong>
+            <p>With GitHub Copilot, you’re always in charge. You can cycle through alternative suggestions, choose which to
+                accept or reject, and manually edit suggested code. GitHub Copilot adapts to the edits you make, matching
+                your coding style.</p>
+            <a href="https://copilot.github.com/" target="_blank">Read more</a>
+        </div>
+    </section>
+
+    <section id="how-it-works">
+        <h2>How it works</h2>
+        <img src="https://copilot.github.com/diagram.png" alt="How it works"/>
+    </section>
+
+    <footer id="footer">
+       <p>Proudly made by <span class="bg-darken" style="padding: 2px 5px; border-radius: 3px; background-color: rgba(0, 0, 0, .2);" >David Assigbi</span>
+            <img id="my-smile" style="display: inline; height: 24px; position: relative; top: 5px;"
+                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/whatsapp/273/smirking-face_1f60f.png" />
+            being taught
+            <a class="bg-darken" style="padding: 2px 5px; border-radius: 3px; background-color: rgba(0, 0, 0, .2); text-decoration: none; color: unset;" id="fcc" href="https://freecodecamp.org" target="_blank">
+                @freecodecamp.org
+            </a>
+        </p>
+
+        <div class="spacing-h-xsm">
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+            </a>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+            </a>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+    <!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>-->
 </body>
+
 </html>
